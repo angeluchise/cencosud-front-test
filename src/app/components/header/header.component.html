@@ -25,3 +25,5 @@
   <button class="btn btn-primary container-center" *ngIf="productsCar.length" (click)="toBuy();openCar = false;">Comprar</button>
   <p class="msg-car" *ngIf="!productsCar.length">No hay productos</p>
 </div>
+<div class="container-bg-hided" *ngIf="openCar" (click)="openCarEvent();">
+</div>
