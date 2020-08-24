@@ -1,0 +1,6 @@
+<div class="container-card">
+  <img [src]="product.images" alt="">
+  <p class="price text-center">${{product.price}}</p>
+  <p class="product-name text-center">{{product.name}}</p>
+  <button class="btn btn-link container-center" (click)="addToCar(product, 1)" *ngIf="!checkoutView">Agregar al carro</button>
+</div>

@@ -1,0 +1,42 @@
+.text-center {
+  text-align: center;
+}
+.container-car {
+  width: 300px;
+  background: white;
+  height: 100%;
+  position: fixed;
+  right: -1000px;
+  z-index: 1;
+  padding-top: 59px;
+  overflow: auto;
+  top: 0;
+  transition: all 0.9s;
+  padding-bottom: 10px;
+}
+.container-open-car {
+  right: 0;
+  transition: all 0.9s;
+}
+.container-car .container-products img {
+  width: 50%;
+  display: table;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+nav.navbar {
+  z-index: 2;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.m-0 {
+  margin: 0;
+}
+.msg-car {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

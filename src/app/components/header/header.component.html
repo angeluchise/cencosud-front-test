@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+  <div class="container">
+    <a class="navbar-brand color-white cursor-pointer" (click)="home()">Cencosud</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link color-white cursor-pointer" (click)="openCarEvent();">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container-car" [ngClass]="{'container-open-car': openCar}">
+  <div class="container-products" *ngFor="let product of productsCar" >
+    <i class="fa fa-times cursor-pointer" (click)="deleteProduct(product.product.code)" aria-hidden="true"></i>
+    <img [src]="product.product.images" alt="">
+    <p class="price text-center">${{product.product.price}}</p>
+    <p class="product-name text-center m-0">{{product.product.name}}</p>
+  </div>
+  <button class="btn btn-primary container-center" *ngIf="productsCar.length" (click)="toBuy();openCar = false;">Comprar</button>
+  <p class="msg-car" *ngIf="!productsCar.length">No hay productos</p>
+</div>
